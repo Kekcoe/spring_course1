@@ -2,6 +2,8 @@ package spring_introduction;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.sql.SQLOutput;
+
 public class Test3 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -11,6 +13,9 @@ public class Test3 {
        // Person person = new Person(pet);
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
+
+        System.out.println(person.getAge());
+        System.out.println(person.getSurname());
 
         context.close();
     }
