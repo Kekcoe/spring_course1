@@ -11,10 +11,10 @@ public class Person {
 //    @Qualifier("catBean")
     private Pet pet;
 
-  //  @Value("Zhliga")
+   @Value("${person.surname}")
       private String surname;
 
-  //  @Value("36")
+    @Value("${person.age}")
     private int age;
 
     public Person(Pet pet) {
