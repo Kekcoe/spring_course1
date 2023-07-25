@@ -9,7 +9,6 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>spring_course1</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -26,7 +25,6 @@
       <scope>test</scope>
     </dependency>
 
-
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
@@ -39,7 +37,11 @@
       <version>1.3.2</version>
     </dependency>
 
-
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.7</version>
+    </dependency>
 
   </dependencies>
 
