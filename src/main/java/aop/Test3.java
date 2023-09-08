@@ -1,7 +1,6 @@
 package aop;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import spring_introduction.MyConfig;
 
 public class Test3 {
     public static void main(String[] args) {

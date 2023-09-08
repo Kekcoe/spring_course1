@@ -12,15 +12,17 @@ public class NewLoggingAspect {
     @Around("execution(public String returnBook())")
     public Object aroundReturnBookLoggingAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("aroundReturnBookLoggingAdvice : try to return book to library");
+        Object targetMethodResult = null;
+        try {
+            targetMethodResult = proceedingJoinPoint.proceed();
+        }catch(Exception e){
+            System.out.println("aroundReturnBookLoggingAdvice : was catch exception " + e);
+            targetMethodResult = "Неизвестное название книги";
 
-        long begin = System.currentTimeMillis();
-        Object targetMethodResult = proceedingJoinPoint.proceed();
-        long end = System.currentTimeMillis();
+            throw e;
+        }
 
         System.out.println("aroundReturnBookLoggingAdvice : returned book to library");
-        System.out.println("aroundReturnBookLoggingAdvice : method returnBook performed work for " + (end - begin)
-                + " Millis");
-
 
         return targetMethodResult;
     }
