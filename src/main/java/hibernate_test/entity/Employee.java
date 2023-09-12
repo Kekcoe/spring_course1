@@ -8,10 +8,11 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
     @Column(name = "name")
-    private String name;
+    private String firstName;
 
     @Column(name = "surname")
     private String surName;
@@ -26,7 +27,7 @@ public class Employee {
     }
 
     public Employee(String name, String surName, String department, Integer salary) {
-        this.name = name;
+        this.firstName = name;
         this.surName = surName;
         this.department = department;
         this.salary = salary;
@@ -38,7 +39,7 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + firstName + '\'' +
                 ", surName='" + surName + '\'' +
                 ", department='" + department + '\'' +
                 ", salary='" + salary + '\'' +
@@ -53,12 +54,12 @@ public class Employee {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String name) {
+        this.firstName = name;
     }
 
     public String getSurName() {
