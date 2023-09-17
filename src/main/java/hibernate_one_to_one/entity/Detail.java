@@ -1,6 +1,7 @@
-package hibernate_test_2.entity;
+package hibernate_one_to_one.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
 @Table(name = "details")
