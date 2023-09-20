@@ -1,4 +1,4 @@
-package hibernate_one_to_many_bi_dir.entity;
+package hibernate_one_to_many_uni.entity;
 
 import javax.persistence.*;
 
@@ -20,9 +20,6 @@ public class Employee {
     @Column(name = "salary")
     private Integer salary;
 
-    @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="department_id")
-    private Deparment department;
 
     public Employee() {
     }
@@ -55,14 +52,6 @@ public class Employee {
 
     public void setSalary(Integer salary) {
         this.salary = salary;
-    }
-
-    public Deparment getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Deparment deparment) {
-        this.department = deparment;
     }
 
     @Override
